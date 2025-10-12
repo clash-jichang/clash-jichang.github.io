@@ -1,0 +1,393 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clash-jichang.github.io/news/article-164737.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>深入解析Quantumult的自动分流功能与配置技巧</title>
+        <meta name="description" content="随着网络应用的多样化和网络环境的复杂化，越来越多的用户寻求高效、智能的网络工具来优化其上网体验。Quantumult便是其中一款功能强大的工具，广泛应用于科学上网、网络加速和流量管理等领域。其独特的自" />
+        <link rel="icon" href="/assets/website/img/freev2rayu/favicon.ico" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="Clash机场 节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clash-jichang.github.io/news/article-164737.htm" />
+    <meta property="og:site_name" content="Clash机场 节点官网" />
+    <meta property="og:title" content="深入解析Quantumult的自动分流功能与配置技巧" />
+    <meta property="og:image" content="https://clash-jichang.github.io/uploads/20250202/7493949e768a9665e4a8e2af8723f3b0.webp" />
+        <meta property="og:release_date" content="2025-10-08T09:57:23" />
+    <meta property="og:updated_time" content="2025-10-08T09:57:23" />
+        <meta property="og:description" content="随着网络应用的多样化和网络环境的复杂化，越来越多的用户寻求高效、智能的网络工具来优化其上网体验。Quantumult便是其中一款功能强大的工具，广泛应用于科学上网、网络加速和流量管理等领域。其独特的自" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="深入解析Quantumult的自动分流功能与配置技巧">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="/assets/website/css/freev2rayu/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/freev2rayu/meanmenu.min.css">
+    <link rel="stylesheet" href="/assets/website/css/freev2rayu/animate.css">
+    <link rel="stylesheet" href="/assets/website/css/freev2rayu/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/assets/website/css/freev2rayu/slick.css">
+    <link rel="stylesheet" href="/assets/website/css/freev2rayu/backtotop.css">
+    <link rel="stylesheet" href="/assets/website/css/freev2rayu/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/website/css/freev2rayu/fontawesome-pro.css">
+    <link rel="stylesheet" href="/assets/website/css/freev2rayu/spacing.css">
+    <link rel="stylesheet" href="/assets/website/css/freev2rayu/main.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-043JNKGQQC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-043JNKGQQC');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854" crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Offcanvas area start -->
+    <div class="fix">
+        <div class="offcanvas__info">
+            <div class="offcanvas__wrapper">
+                <div class="offcanvas__content">
+                    <div class="offcanvas__top mb-40 d-flex justify-content-between align-items-center">
+                        <div class="offcanvas__logo">
+                            <a href="/">
+                                Clash机场节点资源                            </a>
+                        </div>
+                        <div class="offcanvas__close">
+                            <button>
+                                <i class="fal fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mobile-menu fix mb-40"></div>
+                    <div class="offcanvas__social">
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas__overlay"></div>
+    <div class="offcanvas__overlay-white"></div>
+    <!-- Offcanvas area start -->
+    <!-- Header area start -->
+    <header>
+        <div id="header-sticky" class="header__area-3 header__transparent">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-2 col-lg-2 col-6">
+                        <div class="header__logo">
+                            <a href="/" class="p-0 xcblog-blog-logo">
+                                                                <span class="text-primary m-0">Clash机场节点资源</span>
+                                                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-8 col-lg-8 d-none d-lg-block">
+                        <div class="menu__main-wrapper-3 d-flex justify-content-end">
+                            <div class="main-menu main-menu-3 d-none d-none d-lg-block">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                                                                <li>
+                                            <a href="/">首页</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/paid-subscribe/">推荐机场</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/news/">新闻资讯</a>
+                                        </li>
+                                                                                <li>
+                                            <a href="/client.htm">客户端</a>
+                                        </li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-6">
+                        <div class="header__right d-flex align-items-center justify-content-end">
+                            <div class="header__toggle d-xl-none">
+                                <a class="sidebar__active" href="javascript:void(0)">
+                                    <div class="bar-icon">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header area end -->
+    <!-- Body main wrapper start -->
+    <main>
+        <!-- Breadcrumb area stat -->
+        <div class="breadcrumb__area">
+            <img class="breadcrumb__shape-1" src="/assets/website/img/freev2rayu/breadcrum-1.png.png" alt="image not found">
+            <img class="breadcrumb__shape-2" src="/assets/website/img/freev2rayu/breadcrum-1.png.png" alt="image not found">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="breadcrumb__wrapper text-center">
+                            <div class="breadcrumb__title">
+                                <h1>深入解析Quantumult的自动分流功能与配置技巧</h1>
+                            </div>
+                            <div class="breadcrumb__menu">
+                                <nav aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
+                                    <ul class="trail-items">
+                                        <li class="trail-item trail-begin"><span><a href="/">首页</a></span></li>
+                                        <li class="trail-item trail-begin"><span><a href="/news/">新闻资讯</a></span></li>
+                                        <li class="trail-item trail-end"><span>正文</span></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Breadcrumb area end -->
+        <!-- About area start -->
+        <div class="about__area p-relative pt-120 pb-60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Node免费节点站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                    
+<p data-start="30" data-end="219" class="">随着网络应用的多样化和网络环境的复杂化，越来越多的用户寻求高效、智能的网络工具来优化其上网体验。Quantumult便是其中一款功能强大的工具，广泛应用于科学上网、网络加速和流量管理等领域。其独特的自动分流功能能够帮助用户智能选择最佳节点，从而提升网络速度和稳定性。本文将深入分析Quantumult的自动分流功能，并介绍如何配置、优化以及最佳使用实践，帮助您全面提升网络体验。</p>
+<h2 data-start="221" data-end="240" class="">一、什么是Quantumult？</h2>
+<p data-start="242" data-end="409" class="">Quantumult是一款基于iOS平台的高级网络代理工具，广泛用于科学上网、流量管理及网络加速。它支持多种协议，用户可以根据自己的需求，选择不同的代理服务，优化网络连接。Quantumult的最大特点在于其灵活的配置和强大的自动分流功能，这使得用户能够根据实时网络状况，自动切换最佳网络路径，从而提高上网速度并减少网络中断的可能性。</p>
+<h2 data-start="411" data-end="431" class="">二、Quantumult的功能概述</h2>
+<p data-start="433" data-end="470" class="">Quantumult的功能可以分为多个核心模块，下面将逐一介绍其主要特点：</p>
+<h3 data-start="472" data-end="485" class="">1. 网络代理管理</h3>
+<p data-start="487" data-end="615" class="">Quantumult支持多种网络协议，包括HTTP、HTTPS、SOCKS5、Shadowsocks等。用户可以根据不同场景选择最合适的协议，灵活调整代理设置。这一功能使得Quantumult适用于各种网络需求，从个人隐私保护到突破地域封锁，都能轻松应对。</p>
+<h3 data-start="617" data-end="628" class="">2. 流量分析</h3>
+<p data-start="630" data-end="706" class="">Quantumult能够实时监控网络流量，并提供详细的流量使用报告。这一功能帮助用户清晰了解自己的流量消耗情况，及时调整网络策略，避免不必要的数据浪费。</p>
+<h3 data-start="708" data-end="719" class="">3. 规则管理</h3>
+<p data-start="721" data-end="794" class="">Quantumult允许用户自定义规则，根据需求精确控制流量的走向。通过规则管理，用户能够将不同的流量定向到不同的服务器或节点，优化网络传输效率。</p>
+<h3 data-start="796" data-end="807" class="">4. 自动分流</h3>
+<p data-start="809" data-end="908" class="">自动分流是Quantumult最具特色的功能之一。它能够根据用户设定的规则和实时的网络状况，智能选择最优节点进行数据传输。通过这一功能，用户无需手动调整网络节点，系统会自动为用户分配最佳的网络路径。</p>
+<h2 data-start="910" data-end="923" class="">三、什么是自动分流？</h2>
+<p data-start="925" data-end="1052" class="">自动分流是指在网络应用中，根据设定的规则和实时的网络状况，智能地选择最佳的节点或路径，将数据流量高效地分配到不同的服务器。Quantumult的自动分流功能，能够自动根据不同流量的需求，选择最优的网络节点进行处理，确保用户能够享受到稳定、快速的上网体验。</p>
+<p data-start="1054" data-end="1145" class="">通过自动分流，Quantumult能够为每一条网络请求选择合适的代理节点，避免因网络拥堵、延迟过高等问题影响用户体验。具体来说，Quantumult会根据以下几个因素来决定分流路径：</p>
+<ul data-start="1147" data-end="1280">
+<li data-start="1147" data-end="1184" class="" style="">
+<p data-start="1149" data-end="1184" class=""><strong data-start="1149" data-end="1160">节点的响应速度</strong>：自动选择延迟最低的节点，减少连接时的等待时间。</p>
+</li>
+<li data-start="1185" data-end="1226" class="" style="">
+<p data-start="1187" data-end="1226" class=""><strong data-start="1187" data-end="1197">节点的稳定性</strong>：选择稳定性高的节点，避免因节点掉线或不稳定导致连接中断。</p>
+</li>
+<li data-start="1227" data-end="1280" class="" style="">
+<p data-start="1229" data-end="1280" class=""><strong data-start="1229" data-end="1241">流量的类型和需求</strong>：根据网络请求的类型（如浏览网页、观看视频、进行在线游戏等）选择最适合的节点。</p>
+</li>
+</ul>
+<p data-start="1282" data-end="1328" class="">这种智能化的流量管理大大提升了用户体验，使得网络连接更加流畅，避免了手动切换节点的繁琐操作。</p>
+<h2 data-start="1330" data-end="1356" class="">四、如何配置Quantumult实现自动分流？</h2>
+<p data-start="1358" data-end="1421" class="">要使用Quantumult的自动分流功能，首先需要完成软件的安装和配置。以下是配置Quantumult实现自动分流的详细步骤：</p>
+<h3 data-start="1423" data-end="1443" class="">步骤一：安装Quantumult</h3>
+<p data-start="1445" data-end="1539" class="">首先，在App Store中搜索并下载Quantumult应用。安装完成后，打开Quantumult并进入初始设置页面。Quantumult的界面直观易用，用户可以根据引导完成基础的配置。</p>
+<h3 data-start="1541" data-end="1555" class="">步骤二：获取配置文件</h3>
+<p data-start="1557" data-end="1591" class="">自动分流功能依赖于完整的配置文件，用户可以通过以下途径获取配置文件：</p>
+<ul data-start="1593" data-end="1736">
+<li data-start="1593" data-end="1634" class="" style="">
+<p data-start="1595" data-end="1634" class=""><strong data-start="1595" data-end="1605">官方网站下载</strong>：访问Quantumult的官方网站，下载适合的配置文件。</p>
+</li>
+<li data-start="1635" data-end="1688" class="" style="">
+<p data-start="1637" data-end="1688" class=""><strong data-start="1637" data-end="1647">通过社区分享</strong>：许多用户和开发者会在社区分享自己的配置文件，用户可以根据需求选择适合自己的文件。</p>
+</li>
+<li data-start="1689" data-end="1736" class="" style="">
+<p data-start="1691" data-end="1736" class=""><strong data-start="1691" data-end="1701">自行手动配置</strong>：如果用户对网络配置有一定了解，也可以通过手动设置创建自己的配置文件。</p>
+</li>
+</ul>
+<h3 data-start="1738" data-end="1754" class="">步骤三：设置自动分流规则</h3>
+<p data-start="1756" data-end="1795" class="">在Quantumult中配置自动分流规则非常简单，用户只需要按照以下步骤操作：</p>
+<ol data-start="1797" data-end="1987">
+<li data-start="1797" data-end="1857" class="" style="">
+<p data-start="1800" data-end="1857" class=""><strong data-start="1800" data-end="1821">打开Quantumult并进入设置</strong>：在Quantumult主界面，点击右下角的“设置”按钮，进入设置页面。</p>
+</li>
+<li data-start="1858" data-end="1908" class="" style="">
+<p data-start="1861" data-end="1908" class=""><strong data-start="1861" data-end="1871">选择分流功能</strong>：在设置页面中，找到“分流管理”或“规则设置”选项，点击进入分流配置界面。</p>
+</li>
+<li data-start="1909" data-end="1987" class="" style="">
+<p data-start="1912" data-end="1987" class=""><strong data-start="1912" data-end="1922">添加分流规则</strong>：在分流规则设置页面，点击“添加规则”按钮，根据个人需求添加相应的分流规则。例如，您可以设置将特定网站或应用的流量路由到特定节点。</p>
+</li>
+</ol>
+<p data-start="1989" data-end="2037" class="">通过这些简单的步骤，您就可以配置Quantumult实现自动分流功能，让它智能管理您的网络流量。</p>
+<h2 data-start="2039" data-end="2063" class="">五、Quantumult的自动分流最佳实践</h2>
+<p data-start="2065" data-end="2112" class="">虽然Quantumult的自动分流功能非常强大，但要达到最佳使用效果，还需要遵循一些实践技巧。</p>
+<h3 data-start="2114" data-end="2128" class="">1. 选择合适的节点</h3>
+<p data-start="2130" data-end="2216" class="">选择合适的节点是实现高效分流的关键。您应根据实际使用需求，选择低延迟、稳定性高的节点进行流量分流。尤其是在进行视频流媒体播放或在线游戏时，节点的速度和稳定性直接影响到体验。</p>
+<p data-start="2218" data-end="2232" class="">在选择节点时，考虑以下因素：</p>
+<ul data-start="2234" data-end="2309">
+<li data-start="2234" data-end="2272" class="" style="">
+<p data-start="2236" data-end="2272" class=""><strong data-start="2236" data-end="2244">地理位置</strong>：选择与目标服务器距离较近的节点，通常会获得更低的延迟。</p>
+</li>
+<li data-start="2273" data-end="2309" class="" style="">
+<p data-start="2275" data-end="2309" class=""><strong data-start="2275" data-end="2283">节点负载</strong>：选择负载较低的节点，避免因节点超负荷导致网络变慢。</p>
+</li>
+</ul>
+<h3 data-start="2311" data-end="2324" class="">2. 定期更新配置</h3>
+<p data-start="2326" data-end="2414" class="">为了确保Quantumult的自动分流功能始终能够优化网络体验，用户需要定期检查和更新配置文件。新的节点和优化规则会随着时间的推移不断更新，因此保持配置文件的最新状态至关重要。</p>
+<p data-start="2416" data-end="2457" class="">您可以通过社区或开发者发布的更新获取最新的网络优化建议，从而提高分流的精度和效率。</p>
+<h2 data-start="2459" data-end="2470" class="">六、常见问题解答</h2>
+<h3 data-start="2472" data-end="2502" class="">1. Quantumult的自动分流功能有什么优势？</h3>
+<p data-start="2504" data-end="2576" class="">Quantumult的自动分流功能能够根据网络状况智能选择最优节点，减少手动切换的麻烦，使得网络连接更稳定、速度更快，极大提高了用户的上网体验。</p>
+<h3 data-start="2578" data-end="2608" class="">2. 我需要多少技术基础来使用Quantumult？</h3>
+<p data-start="2610" data-end="2705" class="">Quantumult的使用并不需要强大的技术基础。对于普通用户来说，只需要基本的网络知识和操作能力即可掌握。Quantumult提供了友好的用户界面和详细的设置指南，即使是新手也能轻松上手。</p>
+<h3 data-start="2707" data-end="2730" class="">3. 如何解决自动分流不起作用的问题？</h3>
+<p data-start="2732" data-end="2758" class="">如果自动分流功能无法正常工作，用户可以检查以下几点：</p>
+<ul data-start="2760" data-end="2845">
+<li data-start="2760" data-end="2785" class="" style="">
+<p data-start="2762" data-end="2785" class="">确保分流规则配置正确，流量是否与指定节点匹配。</p>
+</li>
+<li data-start="2786" data-end="2818" class="" style="">
+<p data-start="2788" data-end="2818" class="">检查配置文件是否是最新版本，过期的配置文件可能导致分流失效。</p>
+</li>
+<li data-start="2819" data-end="2845" class="" style="">
+<p data-start="2821" data-end="2845" class="">确认网络连接正常，并且所选择的节点处于在线状态。</p>
+</li>
+</ul>
+<h3 data-start="2847" data-end="2871" class="">4. Quantumult支持哪些协议？</h3>
+<p data-start="2873" data-end="2944" class="">Quantumult支持多种协议，包括HTTP、HTTPS、SOCKS5、Shadowsocks等，用户可以根据需求选择最适合的协议进行配置。</p>
+<h3 data-start="2946" data-end="2973" class="">5. 如何优化Quantumult的使用体验？</h3>
+<p data-start="2975" data-end="3056" class="">为了获得最佳体验，用户应定期清理不必要的节点，优化分流规则，并选择适合的服务器位置，降低延迟。定期更新配置文件也是确保Quantumult稳定运行的一个重要步骤。</p>
+<h2 data-start="3058" data-end="3065" class="">七、总结</h2>
+<p data-start="3067" data-end="3205" class="">Quantumult的自动分流功能使得用户能够更加高效地管理网络流量，自动选择最佳节点，实现网络速度和稳定性的最优化。通过灵活的配置和定期的更新，用户可以确保其网络连接始终保持最佳状态。希望通过本文的讲解，您能够充分利用Quantumult的自动分流功能，提升自己的网络体验。</p>
+<h2 data-start="3207" data-end="3212" class="">点评</h2>
+<p data-start="3214" data-end="3408" class="">Quantumult作为一款专业的网络工具，其自动分流功能无疑为用户提供了巨大的便利。它不仅简化了传统的手动配置流程，还根据实时的网络情况智能地调整连接路径，保证了流量的高效分配。在如今这个网络速度和稳定性越来越重要的时代，Quantumult的这一功能无疑大大提升了用户的网络体验。在实际应用中，Quantumult展现了其强大的灵活性和高效性，尤其适合那些需要多节点选择和优化的用户。</p>                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-164363.htm">彻底掌握v2ray时间调整的艺术：从原理到实践的全方位指南</a></p>
+                                        <p>下一个：<a href="/news/article-165120.htm">赤瞳clash深度攻略：从入门到精通的全面指南</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-156813.htm" title="突破边界：数字时代科学上网下载视频的终极指南">突破边界：数字时代科学上网下载视频的终极指南</a></li>
+                        <li class="py-2"><a href="/news/article-160368.htm" title="如何在Xbox上科学上网：详细操作指南">如何在Xbox上科学上网：详细操作指南</a></li>
+                        <li class="py-2"><a href="/news/article-161810.htm" title="探索圈x与Clash的协同之道：强强联合打造高效网络代理体验">探索圈x与Clash的协同之道：强强联合打造高效网络代理体验</a></li>
+                        <li class="py-2"><a href="/news/article-162169.htm" title="WR886N路由器科学上网完全指南：解锁网络自由的新境界">WR886N路由器科学上网完全指南：解锁网络自由的新境界</a></li>
+                        <li class="py-2"><a href="/news/article-161444.htm" title="梅林7.6路由器科学上网终极指南：从安装到优化的全流程解析">梅林7.6路由器科学上网终极指南：从安装到优化的全流程解析</a></li>
+                        <li class="py-2"><a href="/news/article-163286.htm" title="深入解析V2Ray速锐：高效翻墙与上网体验的完美解决方案">深入解析V2Ray速锐：高效翻墙与上网体验的完美解决方案</a></li>
+                        <li class="py-2"><a href="/news/article-162913.htm" title="CSDN科学上网全攻略：解锁技术自由的知识宝典">CSDN科学上网全攻略：解锁技术自由的知识宝典</a></li>
+                        <li class="py-2"><a href="/news/article-162533.htm" title="华硕AC5300路由器V2ray安装与配置全攻略：解锁网络自由与安全新体验">华硕AC5300路由器V2ray安装与配置全攻略：解锁网络自由与安全新体验</a></li>
+                        <li class="py-2"><a href="/news/article-157178.htm" title="解锁视界：Clash看视频终极指南（附优化技巧与实战解析）">解锁视界：Clash看视频终极指南（附优化技巧与实战解析）</a></li>
+                        <li class="py-2"><a href="/news/article-165120.htm" title="赤瞳clash深度攻略：从入门到精通的全面指南">赤瞳clash深度攻略：从入门到精通的全面指南</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">12</span> <a href="/date/2025-10/" title="2025-10 归档">2025-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">15</span> <a href="/date/2025-09/" title="2025-09 归档">2025-09</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About area end -->
+                <!-- Footer area start -->
+        <footer>
+            <section class="footer__border p-relative z-index-11 pt-120 pb-55" data-background="assets/img/shape/footer-bg.png">
+                <div class="footer__style-3">
+                    <span class="footer__cercle"></span>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="footer__copyright">
+                                    <div class="copyright__text text-center">
+                                                            <p>本站内容仅供学习与技术研究用途，无意传播或倡导任何违反法律法规的行为。在此声明：用户须自行了解所在地法律法规，合法合规使用；因使用不当产生的法律责任，与本站及作者无关；请在使用前仔细阅读本声明，继续使用即视为同意以上条款。</p>
+                    <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                                                            <a href="/">Clash机场 节点官网</a> 版权所有 Powered by WordPress
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+        <!-- Footer area end -->
+        <!-- Back to top start -->
+        <div class="progress-wrap">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+            </svg>
+        </div>
+        <!-- Back to top end -->
+        <!-- JS here -->
+        <script src="/assets/website/js/frontend/freev2rayu/jquery-3.6.0.min.js"></script>
+        <script src="/assets/website/js/frontend/freev2rayu/waypoints.min.js"></script>
+        <script src="/assets/website/js/frontend/freev2rayu/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/freev2rayu/meanmenu.min.js"></script>
+        <script src="/assets/website/js/frontend/freev2rayu/swiper-bundle.min.js"></script>
+        <script src="/assets/website/js/frontend/freev2rayu/slick.min.js"></script>
+        <script src="/assets/website/js/frontend/freev2rayu/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/freev2rayu/backtotop.js"></script>
+        <script src="/assets/website/js/frontend/freev2rayu/counterup.js"></script>
+        <script src="/assets/website/js/frontend/freev2rayu/wow.min.js"></script>
+        <script src="/assets/website/js/frontend/freev2rayu/imagesloaded.pkgd.min.js"></script>
+        <script src="/assets/website/js/frontend/freev2rayu/isotope.pkgd.min.js"></script>
+        <script src="/assets/website/js/frontend/freev2rayu/ajax-form.js"></script>
+        <script src="/assets/website/js/frontend/freev2rayu/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </main>
+    <!-- Body main wrapper end -->
+</body>
+
+</html>
