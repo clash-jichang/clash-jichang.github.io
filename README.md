@@ -1,4 +1,4 @@
-# VPN云 | 11月15日22.2M/S|免费Singbox节点/Clash节点/Shadowrocket节点/SSR节点/V2ray节点机场推荐，在线VPN机场梯子购买推荐  更新时间 2025-11-15 10:41:57
+# VPN云 | 11月23日22.5M/S|免费V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点机场推荐，在线VPN机场梯子购买推荐  更新时间 2025-11-23 09:48:22
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://clash-jichang.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://clash-jichang.github.io/uploads/2025/11/0-20251115.yaml
-- https://clash-jichang.github.io/uploads/2025/11/1-20251115.yaml
-- https://clash-jichang.github.io/uploads/2025/11/2-20251115.yaml
-- https://clash-jichang.github.io/uploads/2025/11/3-20251115.yaml
-- https://clash-jichang.github.io/uploads/2025/11/4-20251115.yaml
+- https://clash-jichang.github.io/uploads/2025/11/0-20251123.yaml
+- https://clash-jichang.github.io/uploads/2025/11/1-20251123.yaml
+- https://clash-jichang.github.io/uploads/2025/11/2-20251123.yaml
+- https://clash-jichang.github.io/uploads/2025/11/3-20251123.yaml
+- https://clash-jichang.github.io/uploads/2025/11/4-20251123.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://clash-jichang.github.io/uploads/2025/11/0-20251115.txt
-- https://clash-jichang.github.io/uploads/2025/11/1-20251115.txt
-- https://clash-jichang.github.io/uploads/2025/11/2-20251115.txt
-- https://clash-jichang.github.io/uploads/2025/11/3-20251115.txt
-- https://clash-jichang.github.io/uploads/2025/11/4-20251115.txt
+- https://clash-jichang.github.io/uploads/2025/11/0-20251123.txt
+- https://clash-jichang.github.io/uploads/2025/11/1-20251123.txt
+- https://clash-jichang.github.io/uploads/2025/11/2-20251123.txt
+- https://clash-jichang.github.io/uploads/2025/11/3-20251123.txt
+- https://clash-jichang.github.io/uploads/2025/11/4-20251123.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://clash-jichang.github.io/uploads/2025/11/20251115.json
+- https://clash-jichang.github.io/uploads/2025/11/20251123.json
 
 ## 更多Clash节点订阅 ：
 
