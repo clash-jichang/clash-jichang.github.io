@@ -1,4 +1,4 @@
-# Clash机场 | 5月24日22.8M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Singbox节点/Clash节点机场推荐，在线VPN机场梯子购买推荐  更新时间 2026-05-24 10:28:42
+# Clash机场 | 5月31日18.4M/S|免费Shadowrocket节点/SSR节点/Singbox节点/Clash节点/V2ray节点机场推荐，在线VPN机场梯子购买推荐  更新时间 2026-05-31 08:34:34
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://clash-jichang.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://clash-jichang.github.io/uploads/2026/05/0-20260524.yaml
-- https://clash-jichang.github.io/uploads/2026/05/1-20260524.yaml
-- https://clash-jichang.github.io/uploads/2026/05/2-20260524.yaml
-- https://clash-jichang.github.io/uploads/2026/05/3-20260524.yaml
-- https://clash-jichang.github.io/uploads/2026/05/4-20260524.yaml
+- https://clash-jichang.github.io/uploads/2026/05/0-20260531.yaml
+- https://clash-jichang.github.io/uploads/2026/05/1-20260531.yaml
+- https://clash-jichang.github.io/uploads/2026/05/2-20260531.yaml
+- https://clash-jichang.github.io/uploads/2026/05/3-20260531.yaml
+- https://clash-jichang.github.io/uploads/2026/05/4-20260531.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://clash-jichang.github.io/uploads/2026/05/0-20260524.txt
-- https://clash-jichang.github.io/uploads/2026/05/1-20260524.txt
-- https://clash-jichang.github.io/uploads/2026/05/2-20260524.txt
-- https://clash-jichang.github.io/uploads/2026/05/3-20260524.txt
-- https://clash-jichang.github.io/uploads/2026/05/4-20260524.txt
+- https://clash-jichang.github.io/uploads/2026/05/0-20260531.txt
+- https://clash-jichang.github.io/uploads/2026/05/1-20260531.txt
+- https://clash-jichang.github.io/uploads/2026/05/2-20260531.txt
+- https://clash-jichang.github.io/uploads/2026/05/3-20260531.txt
+- https://clash-jichang.github.io/uploads/2026/05/4-20260531.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://clash-jichang.github.io/uploads/2026/05/20260524.json
+- https://clash-jichang.github.io/uploads/2026/05/20260531.json
 
 ## 更多Clash节点订阅 ：
 
